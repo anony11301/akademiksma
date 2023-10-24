@@ -1,6 +1,6 @@
 <!-- Topbar -->
 <nav
-    class="navbar navbar-expand navbar-light {{ Auth::user() ? 'bg-white' : 'bg-orange' }} topbar mb-4 static-top shadow">
+    class="navbar navbar-expand navbar-light {{ Auth::user() ? 'bg-white' : 'bg-purple' }} topbar mb-4 static-top shadow">
     @if (!Auth::user())
         <a href="{{ route('absensi') }}" class="row w-100 px-5 py-2" style="color: #fff">
             <div class="sidebar-brand-icon rotate-n-15">
