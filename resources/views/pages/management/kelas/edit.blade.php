@@ -17,17 +17,6 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="jurusan">Jurusan</label>
-                    <select class="form-control" id="jurusan" name="jurusan">
-                        <option value="RPL">Rekaya Perangkat Lunak</option>
-                        <option value="MM">Multimedia</option>
-                        <option value="TKJ">Teknik Komputer Jaringan</option>
-                        <option value="BC">Broadcasting</option>
-                    </select>
-                </div>
-            </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="rombel">Rombel</label>
