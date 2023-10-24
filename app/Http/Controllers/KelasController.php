@@ -47,10 +47,9 @@ class KelasController extends Controller
     public function store(Request $request)
     {
         $tingkat = $request->input('tingkat');
-        $jurusan = $request->input('jurusan');
         $rombel = $request->input('rombel');
 
-        $result = $tingkat . ' ' . $jurusan . ' ' . $rombel;
+        $result = $tingkat . ' ' . $rombel;
 
         Kelas::create([
             'nama_kelas' => $result,
@@ -87,10 +86,9 @@ class KelasController extends Controller
     {
         $item = Kelas::findOrFail($id);
         $tingkat = $request->input('tingkat');
-        $jurusan = $request->input('jurusan');
         $rombel = $request->input('rombel');
 
-        $result = $tingkat . ' ' . $jurusan . ' ' . $rombel;
+        $result = $tingkat . ' ' . $rombel;
 
         $item->update([
             'nama_kelas' => $result,
