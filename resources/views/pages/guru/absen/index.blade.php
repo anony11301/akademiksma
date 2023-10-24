@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col">
-                                <div class="h5 mb-0 font-weight-bold text-warning">{{ $item->nama_kelas }}</div>
+                                <div class="h5 mb-0 font-weight-bold text-purple">{{ $item->nama_kelas }}</div>
                                 <small class="text-muted">Tidak Hadir: {{ $jumlahTidakHadir[$item->id] }}</small>
                             </div>
                             <div class="col-auto">

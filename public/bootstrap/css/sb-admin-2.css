@@ -9631,6 +9631,10 @@ a.text-info:hover, a.text-info:focus {
   color: #f6c23e !important;
 }
 
+.text-purple {
+  color: #81007f !important;
+}
+
 a.text-warning:hover, a.text-warning:focus {
   color: #dda20a !important;
 }
