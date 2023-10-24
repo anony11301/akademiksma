@@ -5,7 +5,7 @@
     <a class="sidebar-brand d-flex align-items-center justify-content-center"
         href="{{ Auth::user()->id_level == 1 ? route('dashboard-management') : route('dashboard-guru') }}">
         <img src="/img/logo-sma.png" alt="logo"
-            style="width: 100px; height: 100px; margin-top: 50px;>
+            style="width: 100px; height: 100px; margin-top: 50px;">
     </a>
 
 
