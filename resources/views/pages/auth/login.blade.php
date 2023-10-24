@@ -16,6 +16,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/img/logo-sma.png" type="image/x-icon">
 
     <title>Siakad Prestasi Prima</title>
 </head>
