@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-3 col-sm-6">
-                <div class="card-box bg-orange">
+                <div class="card-box bg-purple">
                     <div class="inner">
                         <h3> {{ $jumlahKelas }} </h3>
                         <p style="color: #fff"> Data Kelas </p>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-6">
-                <div class="card-box bg-orange">
+                <div class="card-box bg-purple">
                     <div class="inner">
                         <h3> {{ $jumlahSiswa }} </h3>
                         <p style="color: #fff"> Data Siswa </p>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
-                <div class="card-box bg-orange">
+                <div class="card-box bg-purple">
                     <div class="inner">
                         <h3> {{ $jumlahSiswa }} </h3>
                         <p style="color: #fff"> Data Absen </p>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="card-body">
                         <div class="pt-4 pb-2">
-                            <canvas id="myLineChart"></canvas>
+                            <canvas id="myLineChart" class="h-100 w-100"></canvas>
                         </div>
                     </div>
                 </div>
