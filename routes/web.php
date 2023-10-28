@@ -97,6 +97,7 @@ Route::group(['middleware' => ['isGuru']], function () {
 Route::get('excel-export', [KelasController::class, 'exportExcel']);
 Route::get('/excel-export-siswa/{id}', [SiswaController::class, 'exportSiswaByKelas'])->name('excel-export-siswa');
 Route::get('excel-export-pelanggaran', [DataPelanggaranController::class, 'export']);
+Route::get('excel-export-jenis', [PelanggaranController::class, 'export']);
 Route::get('/excel-export-absen/{id}', [GuruController::class, 'export'])->name('excel-export-absen');
 
 
