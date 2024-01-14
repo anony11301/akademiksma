@@ -4,7 +4,7 @@
 
         @foreach ($kelas as $item)
             <div class="col col-12 col-xl-4 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-purple shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col">
@@ -13,7 +13,7 @@
                             </div>
                             <div class="col-auto">
                                 <div class="dropdown">
-                                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    <button class="btn btn-purple dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         @if (Auth::user()->id_level == 1)
