@@ -11,22 +11,22 @@ use Illuminate\Support\Facades\DB;
 class SiswaExport implements FromCollection, WithHeadings
 {
     /**
-    * @return \Illuminate\Support\Collection
-    */
+     * @return \Illuminate\Support\Collection
+     */
     public function collection()
     {
         $siswa = DB::table('siswa')
-            ->select('NIS', 'nama', 'poin')
+            ->select('NISN', 'nama', 'poin')
             ->where('id_kelas', $this->id_kelas)
             ->get();
 
         return $siswa;
-    
     }
 
-    public function headings():array {
+    public function headings(): array
+    {
         return [
-            'NIS',
+            'NISN',
             'nama',
             'poin'
         ];

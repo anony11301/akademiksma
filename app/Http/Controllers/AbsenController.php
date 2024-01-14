@@ -50,16 +50,16 @@ class AbsenController extends Controller
         $tanggal = $request->input('tanggal');
         $status = $request->input('status');
         $keterangan = $request->input('keterangan');
-        $nis = $request->input('nis');
+        $nisn = $request->input('nisn');
         $kelas_id = $request->input('kelas_id');
 
 
-        foreach ($nis as $key => $n) {
+        foreach ($nisn as $key => $n) {
             $absen = new Absensi();
             $absen->tanggal = $tanggal;
             $absen->status = $status[$key];
             $absen->keterangan = $keterangan[$key];
-            $absen->NIS = $n;
+            $absen->NISN = $n;
             $absen->id_kelas = $kelas_id;
             $absen->save();
         }

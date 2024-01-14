@@ -31,7 +31,7 @@ Route::get('absensi/{id}', [GuestController::class, 'show'])->name('absensi-deta
 
 Route::get('/create-siswa', [SiswaController::class, 'create']);
 
-Route::group( ['middleware' => ['auth']], function(){
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/absen', [AbsenController::class, 'index'])->name('absen.index');
     Route::get('/management-kelas', [KelasController::class, 'index'])->name('management-kelas');
     Route::get('/management-siswa', [SiswaController::class, 'index'])->name('management-siswa');
@@ -56,9 +56,9 @@ Route::group(['middleware' => ['isManagement'], 'prefix' => 'management'], funct
     Route::get('/management-tambah-siswa/{id}', [SiswaController::class, 'create'])->name('management-tambah-siswa');
     // Route::get('/data-siswa/{id}', [SiswaController::class, 'show'])->name('data-siswa');
     Route::post('/simpan-data-siswa/{id}', [SiswaController::class, 'store'])->name('siswa.store');
-    Route::delete('/delete-siswa/{NIS}', [SiswaController::class, 'destroy'])->name('delete-siswa');
-    Route::get('/edit-siswa/{NIS}', [SiswaController::class, 'edit'])->name('edit-siswa');
-    Route::put('/update-siswa/{NIS}', [SiswaController::class, 'update'])->name('update-siswa');
+    Route::delete('/delete-siswa/{NISN}', [SiswaController::class, 'destroy'])->name('delete-siswa');
+    Route::get('/edit-siswa/{NISN}', [SiswaController::class, 'edit'])->name('edit-siswa');
+    Route::put('/update-siswa/{NISN}', [SiswaController::class, 'update'])->name('update-siswa');
 
     //Pelanggaran
     Route::get('/pelanggaran', [PelanggaranController::class, 'index'])->name('pelanggaran');
@@ -74,8 +74,6 @@ Route::group(['middleware' => ['isManagement'], 'prefix' => 'management'], funct
     Route::get('/data-pelanggaran/{kelas_id}', [DataPelanggaranController::class, 'show'])->name('data-pelanggaran-kelas');
     Route::post('/save-data-pelanggaran/{id}', [DataPelanggaranController::class, 'store'])->name('save-data-pelanggaran');
     Route::get('/rekap-pelanggaran', [DataPelanggaranController::class, 'detail'])->name('rekap-pelanggaran');
-
-
 });
 
 Route::group(['middleware' => ['isGuru']], function () {
@@ -86,7 +84,6 @@ Route::group(['middleware' => ['isGuru']], function () {
     Route::get('/absen-select', [GuruController::class, 'select'])->name('absen.select');
     Route::get('/absen/{kelas_id}', [GuruController::class, 'create'])->name('absen.create');
     Route::post('/absen/store', [GuruController::class, 'store'])->name('absen.store');
-
 });
 
 

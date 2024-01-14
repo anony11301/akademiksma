@@ -11,8 +11,8 @@ use App\Http\Controllers\GuruController;
 class AbsenExport implements FromCollection, withHeadings, ShouldAutoSize
 {
     /**
-    * @return \Illuminate\Support\Collection
-    */
+     * @return \Illuminate\Support\Collection
+     */
     // public function collection()
     // {
     //     return collect(GuruController::export());
@@ -42,7 +42,7 @@ class AbsenExport implements FromCollection, withHeadings, ShouldAutoSize
         //     if ($siswaData) {
         //         $collection[] = [
         //             $key + 1,  // Nomor
-        //             $siswaData->nis,  // NIS
+        //             $siswaData->nisn,  // NISN
         //             $siswaData->nama,  // Nama Siswa
         //             $value->status,  // Status
         //             $value->keterangan,  // Keterangan
@@ -52,13 +52,13 @@ class AbsenExport implements FromCollection, withHeadings, ShouldAutoSize
         // }
 
         return $this->data;
-
     }
 
-    public function headings():array {
+    public function headings(): array
+    {
         return [
             'Nomor',
-            'NIS',
+            'NISN',
             'Nama Siswa',
             'Nama Kelas',
             'Status',
