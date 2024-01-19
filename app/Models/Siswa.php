@@ -11,7 +11,9 @@ class Siswa extends Model
     use HasFactory;
 
     protected $table = 'siswa';
+
     protected $primaryKey = 'NISN';
+
     protected $casts = [
         'NISN' => 'string',
     ];

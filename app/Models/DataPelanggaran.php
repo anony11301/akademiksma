@@ -12,6 +12,10 @@ class DataPelanggaran extends Model
 
     protected $table = 'data_pelanggaran';
 
+    protected $casts = [
+        'NISN' => 'string',
+    ];
+
     protected $fillable = [
         'NISN',
         'id_pelanggaran',

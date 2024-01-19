@@ -146,23 +146,6 @@ class SiswaController extends Controller
      */
     public function destroy($NISN)
     {
-        // try {
-        //     DB::statement('SET FOREIGN_KEY_CHECKS=0');
-
-        //     $siswa = Siswa::where('NISN', $NISN)->first();
-
-        //     if (!$siswa) {
-        //         return redirect()->route('management-siswa')->with('error', 'Siswa tidak ditemukan.');
-        //     }
-
-        //     $siswa->absen()->delete();
-        //     $siswa->delete();
-
-        //     return redirect()->route('management-siswa')->with('success');
-        // } finally {
-        //     DB::statement('SET FOREIGN_KEY_CHECKS=1');
-        // }
-
         $absen = Absensi::where('NISN', $NISN)->get();
         $pelanggaran = DataPelanggaran::where('NISN', $NISN)->get();
 

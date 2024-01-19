@@ -13,6 +13,10 @@ class Absensi extends Model
 
     protected $table = 'absen'; // Nama tabel absensi di database
 
+    protected $casts = [
+        'NISN' => 'string',
+    ];
+
     protected $fillable = [
         'NISN', // Kolom NISN sebagai foreign key
         'id_kelas', // Kolom id_kelas sebagai foreign key
