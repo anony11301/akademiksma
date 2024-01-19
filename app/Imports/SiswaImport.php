@@ -30,7 +30,7 @@ class SiswaImport implements ToModel, WithHeadingRow
         }
 
         return new Siswa([
-            'NISN' => $row['nisn'],
+            'NISN' => $row['nisn'], // Change 'NISN' to 'nisn'
             'nama' => $row['nama'],
             'id_kelas' => $this->id_kelas,
         ]);
