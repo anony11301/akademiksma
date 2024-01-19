@@ -147,24 +147,26 @@ class SiswaController extends Controller
     public function destroy($NISN)
     {
         $absen = Absensi::where('NISN', $NISN)->get();
-        $pelanggaran = DataPelanggaran::where('NISN', $NISN)->get();
 
-        if ($pelanggaran) {
-            foreach ($pelanggaran as $item) {
-                $item->delete();
-            }
-        }
-
-        if ($absen) {
+        if ($absen->isNotEmpty()) {
             foreach ($absen as $item) {
                 $item->delete();
             }
         }
 
+        $pelanggaran = DataPelanggaran::where('NISN', $NISN)->get();
+
+        if ($pelanggaran->isNotEmpty()) {
+            foreach ($pelanggaran as $item) {
+                $item->delete();
+            }
+        }
 
         Siswa::destroy($NISN);
         return redirect()->route('management-siswa')->with('success');
     }
+
+
 
 
 

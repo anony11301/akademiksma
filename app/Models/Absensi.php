@@ -42,6 +42,7 @@ class Absensi extends Model
     {
         $result = DB::table('absen')
             ->join('siswa', 'absen.NISN', '=', 'siswa.NISN')
+            ->join('kelas', 'absen.id_kelas', '=', 'kelas.nama_kelas')
             ->select('absen.id', 'absen.NISN', 'siswa.nama', 'absen.status', 'absen.keterangan', 'absen.tanggal')
             ->get()
             ->toArray();

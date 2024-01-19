@@ -4,8 +4,9 @@ namespace App\Imports;
 
 use App\Models\Siswa;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class SiswaImport implements ToModel
+class SiswaImport implements ToModel, WithHeadingRow
 {
     /**
      * @param array $row
@@ -29,7 +30,7 @@ class SiswaImport implements ToModel
         }
 
         return new Siswa([
-            'NISN' => $row['nisn'],
+            'NISN' => $row['nisn'], // Change 'NISN' to 'nisn'
             'nama' => $row['nama'],
             'id_kelas' => $this->id_kelas,
         ]);

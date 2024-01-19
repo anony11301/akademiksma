@@ -107,28 +107,31 @@ class KelasController extends Controller
      */
     public function destroy(string $id)
     {
-        $absen = Absensi::where('id_kelas', $id)->get();
-        $pelanggaran = DataPelanggaran::where('id_kelas', $id)->get();
         $siswa = Siswa::where('id_kelas', $id)->get();
+        $absen =  Absensi::where('id_kelas', $id)->get();
+        $pelanggaran = DataPelanggaran::where('id_kelas', $id)->get();
 
-        dd($absen, $pelanggaran);
+        // dd($absen)->get();
+
+        if ($pelanggaran) {
+
+            foreach ($pelanggaran as $item) {
+                $item->delete();
+            }
+        }
+        if ($absen) {
+        }
 
         if ($siswa) {
-            if ($absen) {
-                foreach ($absen as $item) {
-                    $item->delete();
-                }
-            }
-            if ($pelanggaran) {
-                foreach ($pelanggaran as $item) {
-                    $item->delete();
-                }
-            }
+
             foreach ($siswa as $item) {
                 $item->delete();
             }
         }
+        Kelas::destroy($id);
+        return redirect()->route('management-kelas');
     }
+
 
     // Function Export
     public function exportExcel()
