@@ -14,17 +14,23 @@ class SiswaImport implements ToModel
      */
 
     private $id_kelas;
+    private $startRow;
 
-    public function __construct($id_kelas)
+    public function __construct($id_kelas, $startRow = 2)
     {
         $this->id_kelas = $id_kelas;
+        $this->startRow = $startRow;
     }
 
     public function model(array $row)
     {
+        if ($this->startRow <= 1) {
+            return null;
+        }
+
         return new Siswa([
-            'NISN' => $row[1],
-            'nama' => $row[2],
+            'NISN' => $row['nisn'],
+            'nama' => $row['nama'],
             'id_kelas' => $this->id_kelas,
         ]);
     }
